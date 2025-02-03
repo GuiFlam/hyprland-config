@@ -1,17 +1,127 @@
-/* -----------------------------------------------------
- * Import Pywal colors 
- * ----------------------------------------------------- */
-/* @import '../../../../../.cache/wal/colors-waybar.css';*/
+@import url("file:///home/mage/.cache/wal/colors-waybar.css");
 
-@define-color backgroundlight #4a6882;
-@define-color backgrounddark #4a6882;
-@define-color workspacesbackground1 #4a6882;
-@define-color workspacesbackground2 #78aad6;
-@define-color bordercolor #ffffff;
-@define-color textcolor1 #ffffff;
-@define-color textcolor2 #ffffff;
-@define-color textcolor3 #000000;
-@define-color iconcolor #cfbafa;
- 
-@import 'default-style.css';
- 
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    /*background: @background;*/
+    color: @foreground;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: @color2;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: @foreground;
+}
+
+#workspaces button.focused {
+    color: @foreground;
+    background: @background;
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: #11111b;
+    background: @background;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: #cdd6f4;
+    color: #11111b; 
+    border-radius: 10px;
+}
+
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#workspaces,
+#tray,
+#backlight {
+    background: @background;
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-top: 5px;
+    /* border: 1px solid #181825; */
+}
+
+#backlight {
+    border-radius: 10px 0px 0px 10px;
+}
+
+#tray {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#workspaces {
+    background: @background ;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#cpu {
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
+
+#memory {
+    border-radius: 10px 0px 0px 10px;
+}
+
+#window {
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#clock {
+    color: @foreground;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 5px;
+    border-right: 0px;
+}
+
+#network {
+    color:  @foreground;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+#pulseaudio {
+    color: @foreground;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#pulseaudio.microphone {
+    color: @foreground;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 5px;
+}
+
+#battery {
+    color: @foreground;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
